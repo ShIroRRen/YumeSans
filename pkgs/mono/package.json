@@ -1,0 +1,29 @@
+{
+	"name": "@yesans/mono",
+	"version": "0.1.0",
+	"license": "F2DLL",
+	"files": [
+		"dist"
+	],
+	"sideEffects": [
+		"*.css"
+	],
+	"main": "dist/index.css",
+	"exports": {
+		".": "./dist/index.css",
+		"./index.css": "./dist/index.css",
+		"./woff2/*": "./dist/woff2/*",
+		"./YumeSansMono-Regular.ttf": "./dist/YumeSansMono-Regular.ttf",
+		"./YumeSansMono-Regular.woff": "./dist/YumeSansMono-Regular.woff"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"prepublishOnly": "bun run build",
+		"build": "bun run ../../tools/build-pkg.ts mono"
+	},
+	"dependencies": {
+		"@yesans/emoji": "^0.1.0"
+	}
+}

@@ -1,0 +1,26 @@
+{
+	"name": "@yesans/cjk",
+	"version": "0.1.0",
+	"license": "F2DLL",
+	"files": [
+		"dist"
+	],
+	"sideEffects": [
+		"*.css"
+	],
+	"main": "dist/index.css",
+	"exports": {
+		".": "./dist/index.css",
+		"./index.css": "./dist/index.css",
+		"./woff2/*": "./dist/woff2/*",
+		"./YumeSansCJK-Regular.ttf": "./dist/YumeSansCJK-Regular.ttf",
+		"./YumeSansCJK-Regular.woff": "./dist/YumeSansCJK-Regular.woff"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"prepublishOnly": "bun run build",
+		"build": "bun run ../../tools/build-pkg.ts cjk"
+	}
+}

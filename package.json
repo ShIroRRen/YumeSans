@@ -1,0 +1,25 @@
+{
+	"name": "yumesans",
+	"version": "0.1.0",
+	"private": true,
+	"workspaces": [
+		"pkgs/*"
+	],
+	"type": "module",
+	"scripts": {
+		"prepare": "bun run tools/setup.ts",
+		"postinstall": "bun run tools/fetch.ts",
+		"build": "bun run tools/build.ts",
+		"build:fonts": "bun run tools/build.ts --fonts",
+		"build:pack": "bun run tools/build.ts --pack",
+		"format": "vp fmt"
+	},
+	"devDependencies": {
+		"@types/bun": "^1.4.4",
+		"@types/ttf2woff": "^2.0.4",
+		"cn-font-split": "^7.4.3",
+		"ttf2woff": "^3.0.0",
+		"typescript": "^7.0.2",
+		"vite-plus": "^1.7.0"
+	}
+}
